@@ -1,0 +1,254 @@
+{
+  "$defs": {
+    "BoardConfig": {
+      "properties": {
+        "template": {
+          "default": "arduino-uno",
+          "title": "Template",
+          "type": "string"
+        }
+      },
+      "title": "BoardConfig",
+      "type": "object"
+    },
+    "Connection": {
+      "properties": {
+        "from": {
+          "title": "From",
+          "type": "string"
+        },
+        "to": {
+          "title": "To",
+          "type": "string"
+        },
+        "source": {
+          "default": "vision",
+          "enum": [
+            "vision",
+            "user",
+            "template"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "conf": {
+          "default": 1.0,
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Conf",
+          "type": "number"
+        },
+        "confirmed": {
+          "default": false,
+          "title": "Confirmed",
+          "type": "boolean"
+        },
+        "wire_color": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Wire Color"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        }
+      },
+      "required": [
+        "from",
+        "to"
+      ],
+      "title": "Connection",
+      "type": "object"
+    },
+    "InspectionSlot": {
+      "properties": {
+        "slot": {
+          "title": "Slot",
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "present",
+            "missing",
+            "skipped"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "conf": {
+          "default": 1.0,
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Conf",
+          "type": "number"
+        }
+      },
+      "required": [
+        "slot",
+        "state"
+      ],
+      "title": "InspectionSlot",
+      "type": "object"
+    },
+    "Part": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "type": {
+          "title": "Type",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "color": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Color"
+        },
+        "bbox": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bbox"
+        },
+        "source": {
+          "default": "vision",
+          "enum": [
+            "vision",
+            "live",
+            "user",
+            "template",
+            "stub"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "conf": {
+          "default": 1.0,
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Conf",
+          "type": "number"
+        },
+        "confirmed": {
+          "default": false,
+          "title": "Confirmed",
+          "type": "boolean"
+        },
+        "track_id": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Track Id"
+        },
+        "wokwi_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Wokwi Type"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "title": "Part",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "version": {
+      "default": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "board": {
+      "$ref": "#/$defs/BoardConfig"
+    },
+    "parts": {
+      "items": {
+        "$ref": "#/$defs/Part"
+      },
+      "title": "Parts",
+      "type": "array"
+    },
+    "connections": {
+      "items": {
+        "$ref": "#/$defs/Connection"
+      },
+      "title": "Connections",
+      "type": "array"
+    },
+    "inspection": {
+      "items": {
+        "$ref": "#/$defs/InspectionSlot"
+      },
+      "title": "Inspection",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "title": "Circuit",
+  "type": "object"
+}

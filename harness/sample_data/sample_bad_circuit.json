@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "id": "sample-bad-circuit",
+  "board": {
+    "template": "arduino-uno"
+  },
+  "parts": [
+    {
+      "id": "led1",
+      "type": "led",
+      "value": null,
+      "color": "red",
+      "bbox": [0.55, 0.35, 0.08, 0.08],
+      "source": "vision",
+      "conf": 0.88,
+      "confirmed": true,
+      "track_id": null,
+      "wokwi_type": "wokwi-led"
+    },
+    {
+      "id": "btn1",
+      "type": "pushbutton",
+      "value": null,
+      "color": null,
+      "bbox": [0.70, 0.50, 0.10, 0.10],
+      "source": "vision",
+      "conf": 0.40,
+      "confirmed": false,
+      "track_id": null,
+      "wokwi_type": "wokwi-pushbutton"
+    }
+  ],
+  "connections": [
+    {
+      "from": "uno:13",
+      "to": "led1:A",
+      "source": "user",
+      "conf": 1.0,
+      "confirmed": true,
+      "wire_color": "green",
+      "note": "Direct connection without resistor (triggers R009)"
+    },
+    {
+      "from": "led1:C",
+      "to": "uno:GND.1",
+      "source": "user",
+      "conf": 1.0,
+      "confirmed": true,
+      "wire_color": "black",
+      "note": "Cathode directly to GND (triggers R009)"
+    },
+    {
+      "from": "uno:13",
+      "to": "led1:A",
+      "source": "user",
+      "conf": 1.0,
+      "confirmed": true,
+      "wire_color": "green",
+      "note": "Duplicate wire (triggers R003)"
+    },
+    {
+      "from": "uno:99",
+      "to": "btn1:1.l",
+      "source": "user",
+      "conf": 1.0,
+      "confirmed": true,
+      "wire_color": "red",
+      "note": "Unsupported pin 99 (triggers R001)"
+    },
+    {
+      "from": "uno:5V",
+      "to": "btn1:1.r",
+      "source": "vision",
+      "conf": 0.45,
+      "confirmed": false,
+      "wire_color": "red",
+      "note": "Unconfirmed wire proposal (triggers R010)"
+    }
+  ],
+  "inspection": []
+}
+

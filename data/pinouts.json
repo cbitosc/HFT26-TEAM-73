@@ -1,0 +1,255 @@
+{
+  "arduino-uno": {
+    "name": "Arduino Uno",
+    "aliases": ["arduino-uno", "arduino_uno", "arduino uno", "uno", "atmega328p-board"],
+    "description": "ATmega328P based 8-bit microcontroller development board with 14 digital I/O pins and 6 analog inputs.",
+    "verified": true,
+    "voltage_limits": {
+      "operating_voltage": 5.0,
+      "input_voltage_recommended_min": 7.0,
+      "input_voltage_recommended_max": 12.0,
+      "input_voltage_absolute_max": 20.0,
+      "dc_current_per_io_pin_ma": 20.0,
+      "dc_current_3v3_pin_ma": 50.0
+    },
+    "pins": [
+      {"name": "0", "pin_number": "D0", "function": "Digital IO / RX (Serial Receive)", "max_voltage": 5.0},
+      {"name": "1", "pin_number": "D1", "function": "Digital IO / TX (Serial Transmit)", "max_voltage": 5.0},
+      {"name": "2", "pin_number": "D2", "function": "Digital IO / External Interrupt 0", "max_voltage": 5.0},
+      {"name": "3", "pin_number": "D3", "function": "Digital IO / PWM", "max_voltage": 5.0},
+      {"name": "4", "pin_number": "D4", "function": "Digital IO", "max_voltage": 5.0},
+      {"name": "5", "pin_number": "D5", "function": "Digital IO / PWM", "max_voltage": 5.0},
+      {"name": "6", "pin_number": "D6", "function": "Digital IO / PWM", "max_voltage": 5.0},
+      {"name": "7", "pin_number": "D7", "function": "Digital IO", "max_voltage": 5.0},
+      {"name": "8", "pin_number": "D8", "function": "Digital IO", "max_voltage": 5.0},
+      {"name": "9", "pin_number": "D9", "function": "Digital IO / PWM", "max_voltage": 5.0},
+      {"name": "10", "pin_number": "D10", "function": "Digital IO / PWM / SPI SS", "max_voltage": 5.0},
+      {"name": "11", "pin_number": "D11", "function": "Digital IO / PWM / SPI MOSI", "max_voltage": 5.0},
+      {"name": "12", "pin_number": "D12", "function": "Digital IO / SPI MISO", "max_voltage": 5.0},
+      {"name": "13", "pin_number": "D13", "function": "Digital IO / Built-in LED / SPI SCK", "max_voltage": 5.0},
+      {"name": "A0", "pin_number": "A0", "function": "Analog Input 0 / Digital IO", "max_voltage": 5.0},
+      {"name": "A1", "pin_number": "A1", "function": "Analog Input 1 / Digital IO", "max_voltage": 5.0},
+      {"name": "A2", "pin_number": "A2", "function": "Analog Input 2 / Digital IO", "max_voltage": 5.0},
+      {"name": "A3", "pin_number": "A3", "function": "Analog Input 3 / Digital IO", "max_voltage": 5.0},
+      {"name": "A4", "pin_number": "A4", "function": "Analog Input 4 / I2C SDA", "max_voltage": 5.0},
+      {"name": "A5", "pin_number": "A5", "function": "Analog Input 5 / I2C SCL", "max_voltage": 5.0},
+      {"name": "5V", "pin_number": "5V", "function": "Regulated 5V Power Output", "max_voltage": 5.0},
+      {"name": "3.3V", "pin_number": "3.3V", "function": "Regulated 3.3V Power Output", "max_voltage": 3.3},
+      {"name": "VIN", "pin_number": "VIN", "function": "Unregulated External Voltage Input", "max_voltage": 12.0},
+      {"name": "GND.1", "pin_number": "GND.1", "function": "Power Ground (Power Header Pin 6)", "max_voltage": 0.0},
+      {"name": "GND.2", "pin_number": "GND.2", "function": "Power Ground (Power Header Pin 7)", "max_voltage": 0.0},
+      {"name": "GND.3", "pin_number": "GND.3", "function": "Digital Ground (Digital Header Pin 4)", "max_voltage": 0.0},
+      {"name": "RESET", "pin_number": "RESET", "function": "Active Low Microcontroller Reset", "max_voltage": 5.0},
+      {"name": "IOREF", "pin_number": "IOREF", "function": "I/O Reference Voltage", "max_voltage": 5.0},
+      {"name": "AREF", "pin_number": "AREF", "function": "Analog Reference Voltage", "max_voltage": 5.0}
+    ]
+  },
+  "esp32-devkit": {
+    "name": "ESP32 DevKit V1",
+    "aliases": ["esp32", "esp32-devkit", "esp32-wroom", "esp32_devkit", "esp32 devkit", "nodemcu-32s"],
+    "description": "Dual-core Xtensa 32-bit LX6 microcontroller with integrated 2.4 GHz Wi-Fi and Bluetooth.",
+    "verified": true,
+    "voltage_limits": {
+      "operating_voltage": 3.3,
+      "max_gpio_voltage": 3.6,
+      "input_voltage_vin_max": 5.5,
+      "dc_current_per_gpio_ma": 40.0
+    },
+    "pins": [
+      {"name": "3V3", "pin_number": "1", "function": "3.3V Power Output", "max_voltage": 3.3},
+      {"name": "EN", "pin_number": "2", "function": "Enable / Reset (Active High)", "max_voltage": 3.3},
+      {"name": "VP", "pin_number": "3", "function": "GPIO36 / ADC1_CH0 (Input only)", "max_voltage": 3.3},
+      {"name": "VN", "pin_number": "4", "function": "GPIO39 / ADC1_CH3 (Input only)", "max_voltage": 3.3},
+      {"name": "D34", "pin_number": "5", "function": "GPIO34 / ADC1_CH6 (Input only)", "max_voltage": 3.3},
+      {"name": "D35", "pin_number": "6", "function": "GPIO35 / ADC1_CH7 (Input only)", "max_voltage": 3.3},
+      {"name": "D32", "pin_number": "7", "function": "GPIO32 / Touch9 / ADC1_CH4", "max_voltage": 3.3},
+      {"name": "D33", "pin_number": "8", "function": "GPIO33 / Touch8 / ADC1_CH5", "max_voltage": 3.3},
+      {"name": "D25", "pin_number": "9", "function": "GPIO25 / DAC1 / ADC2_CH8", "max_voltage": 3.3},
+      {"name": "D26", "pin_number": "10", "function": "GPIO26 / DAC2 / ADC2_CH9", "max_voltage": 3.3},
+      {"name": "D27", "pin_number": "11", "function": "GPIO27 / Touch7 / ADC2_CH7", "max_voltage": 3.3},
+      {"name": "D14", "pin_number": "12", "function": "GPIO14 / Touch6 / HSPI_CLK", "max_voltage": 3.3},
+      {"name": "D12", "pin_number": "13", "function": "GPIO12 / Touch5 / HSPI_MISO", "max_voltage": 3.3},
+      {"name": "D13", "pin_number": "14", "function": "GPIO13 / Touch4 / HSPI_MOSI", "max_voltage": 3.3},
+      {"name": "GND.1", "pin_number": "15", "function": "Ground", "max_voltage": 0.0},
+      {"name": "VIN", "pin_number": "16", "function": "5V Power Input", "max_voltage": 5.5},
+      {"name": "D23", "pin_number": "17", "function": "GPIO23 / VSPI_MOSI", "max_voltage": 3.3},
+      {"name": "D22", "pin_number": "18", "function": "GPIO22 / I2C SCL", "max_voltage": 3.3},
+      {"name": "TX0", "pin_number": "19", "function": "GPIO1 / UART0 TX", "max_voltage": 3.3},
+      {"name": "RX0", "pin_number": "20", "function": "GPIO3 / UART0 RX", "max_voltage": 3.3},
+      {"name": "D21", "pin_number": "21", "function": "GPIO21 / I2C SDA", "max_voltage": 3.3},
+      {"name": "D19", "pin_number": "22", "function": "GPIO19 / VSPI_MISO", "max_voltage": 3.3},
+      {"name": "D18", "pin_number": "23", "function": "GPIO18 / VSPI_SCK", "max_voltage": 3.3},
+      {"name": "D5", "pin_number": "24", "function": "GPIO5 / VSPI_CS", "max_voltage": 3.3},
+      {"name": "TX2", "pin_number": "25", "function": "GPIO17 / UART2 TX", "max_voltage": 3.3},
+      {"name": "RX2", "pin_number": "26", "function": "GPIO16 / UART2 RX", "max_voltage": 3.3},
+      {"name": "D4", "pin_number": "27", "function": "GPIO4 / Touch0", "max_voltage": 3.3},
+      {"name": "D2", "pin_number": "28", "function": "GPIO2 / Built-in Blue LED", "max_voltage": 3.3},
+      {"name": "D15", "pin_number": "29", "function": "GPIO15 / HSPI_CS", "max_voltage": 3.3},
+      {"name": "GND.2", "pin_number": "30", "function": "Ground", "max_voltage": 0.0}
+    ]
+  },
+  "raspberry-pi-pico": {
+    "name": "Raspberry Pi Pico",
+    "aliases": ["pico", "rp2040", "raspberry-pi-pico", "raspberry pi pico"],
+    "description": "RP2040 dual-core ARM Cortex-M0+ microcontroller board running at 133 MHz.",
+    "verified": true,
+    "voltage_limits": {
+      "operating_voltage": 3.3,
+      "max_gpio_voltage": 3.63,
+      "vsys_min": 1.8,
+      "vsys_max": 5.5
+    },
+    "pins": [
+      {"name": "GP0", "pin_number": "1", "function": "UART0 TX / I2C0 SDA / SPI0 RX", "max_voltage": 3.3},
+      {"name": "GP1", "pin_number": "2", "function": "UART0 RX / I2C0 SCL / SPI0 CSn", "max_voltage": 3.3},
+      {"name": "GND.1", "pin_number": "3", "function": "Ground", "max_voltage": 0.0},
+      {"name": "GP2", "pin_number": "4", "function": "I2C1 SDA / SPI0 SCK", "max_voltage": 3.3},
+      {"name": "GP3", "pin_number": "5", "function": "I2C1 SCL / SPI0 TX", "max_voltage": 3.3},
+      {"name": "GP4", "pin_number": "6", "function": "UART1 TX / I2C0 SDA", "max_voltage": 3.3},
+      {"name": "GP5", "pin_number": "7", "function": "UART1 RX / I2C0 SCL", "max_voltage": 3.3},
+      {"name": "GND.2", "pin_number": "8", "function": "Ground", "max_voltage": 0.0},
+      {"name": "3V3", "pin_number": "36", "function": "3.3V Output Power", "max_voltage": 3.3},
+      {"name": "VBUS", "pin_number": "40", "function": "Micro-USB 5V Power", "max_voltage": 5.25}
+    ]
+  },
+  "atmega328p": {
+    "name": "ATmega328P DIP-28",
+    "aliases": ["atmega328p", "atmega328", "atmega328p-pu"],
+    "description": "High-performance AVR 8-bit RISC microcontroller chip.",
+    "verified": true,
+    "voltage_limits": {
+      "min_vcc": 1.8,
+      "max_vcc": 5.5,
+      "nominal_voltage": 5.0,
+      "dc_current_per_pin_ma": 40.0
+    },
+    "pins": [
+      {"name": "PC6_RESET", "pin_number": "1", "function": "RESET (Active Low)", "max_voltage": 5.5},
+      {"name": "PD0_RXD", "pin_number": "2", "function": "USART Input", "max_voltage": 5.5},
+      {"name": "PD1_TXD", "pin_number": "3", "function": "USART Output", "max_voltage": 5.5},
+      {"name": "PD2_INT0", "pin_number": "4", "function": "External Interrupt 0", "max_voltage": 5.5},
+      {"name": "VCC", "pin_number": "7", "function": "Supply Voltage (1.8V - 5.5V)", "max_voltage": 5.5},
+      {"name": "GND", "pin_number": "8", "function": "Ground", "max_voltage": 0.0},
+      {"name": "PB6_XTAL1", "pin_number": "9", "function": "Crystal Oscillator Input", "max_voltage": 5.5},
+      {"name": "PB7_XTAL2", "pin_number": "10", "function": "Crystal Oscillator Output", "max_voltage": 5.5},
+      {"name": "AVCC", "pin_number": "20", "function": "Analog Supply Voltage", "max_voltage": 5.5},
+      {"name": "AREF", "pin_number": "21", "function": "Analog Reference", "max_voltage": 5.5},
+      {"name": "GND2", "pin_number": "22", "function": "Ground", "max_voltage": 0.0}
+    ]
+  },
+  "ne555": {
+    "name": "NE555 Timer IC",
+    "aliases": ["ne555", "555", "ne555p", "lm555", "555 timer"],
+    "description": "Precision timing circuit capable of producing accurate time delays or oscillation.",
+    "verified": true,
+    "voltage_limits": {
+      "min_vcc": 4.5,
+      "max_vcc": 16.0,
+      "max_sink_source_current_ma": 200.0
+    },
+    "pins": [
+      {"name": "GND", "pin_number": "1", "function": "Ground (0V)", "max_voltage": 0.0},
+      {"name": "TRIG", "pin_number": "2", "function": "Trigger (Active low at < 1/3 VCC)", "max_voltage": 16.0},
+      {"name": "OUT", "pin_number": "3", "function": "Output", "max_voltage": 16.0},
+      {"name": "RESET", "pin_number": "4", "function": "Reset (Active low)", "max_voltage": 16.0},
+      {"name": "CTRL", "pin_number": "5", "function": "Control Voltage (2/3 VCC default bypass 0.01uF)", "max_voltage": 16.0},
+      {"name": "THR", "pin_number": "6", "function": "Threshold (> 2/3 VCC resets output)", "max_voltage": 16.0},
+      {"name": "DISCH", "pin_number": "7", "function": "Discharge (open collector)", "max_voltage": 16.0},
+      {"name": "VCC", "pin_number": "8", "function": "Positive Supply Voltage (4.5V - 16V)", "max_voltage": 16.0}
+    ]
+  },
+  "l293d": {
+    "name": "L293D Dual H-Bridge Motor Driver",
+    "aliases": ["l293d", "l293", "l293dne", "h-bridge", "motor driver ic"],
+    "description": "Quadruple high-current half-H driver designed to drive inductive loads such as relays, solenoids, and DC stepper motors.",
+    "verified": true,
+    "voltage_limits": {
+      "vcc1_logic_min": 4.5,
+      "vcc1_logic_max": 7.0,
+      "vcc2_motor_max": 36.0,
+      "continuous_output_current_ma": 600.0
+    },
+    "pins": [
+      {"name": "1,2EN", "pin_number": "1", "function": "Enable channels 1 & 2 (Active High)", "max_voltage": 7.0},
+      {"name": "1A", "pin_number": "2", "function": "Driver 1 Input", "max_voltage": 7.0},
+      {"name": "1Y", "pin_number": "3", "function": "Driver 1 Output", "max_voltage": 36.0},
+      {"name": "GND1", "pin_number": "4", "function": "Ground / Heatsink", "max_voltage": 0.0},
+      {"name": "GND2", "pin_number": "5", "function": "Ground / Heatsink", "max_voltage": 0.0},
+      {"name": "2Y", "pin_number": "6", "function": "Driver 2 Output", "max_voltage": 36.0},
+      {"name": "2A", "pin_number": "7", "function": "Driver 2 Input", "max_voltage": 7.0},
+      {"name": "VCC2", "pin_number": "8", "function": "Motor Power Supply (up to 36V)", "max_voltage": 36.0},
+      {"name": "3,4EN", "pin_number": "9", "function": "Enable channels 3 & 4 (Active High)", "max_voltage": 7.0},
+      {"name": "3A", "pin_number": "10", "function": "Driver 3 Input", "max_voltage": 7.0},
+      {"name": "3Y", "pin_number": "11", "function": "Driver 3 Output", "max_voltage": 36.0},
+      {"name": "GND3", "pin_number": "12", "function": "Ground / Heatsink", "max_voltage": 0.0},
+      {"name": "GND4", "pin_number": "13", "function": "Ground / Heatsink", "max_voltage": 0.0},
+      {"name": "4Y", "pin_number": "14", "function": "Driver 4 Output", "max_voltage": 36.0},
+      {"name": "4A", "pin_number": "15", "function": "Driver 4 Input", "max_voltage": 7.0},
+      {"name": "VCC1", "pin_number": "16", "function": "Logic Supply Voltage (5V)", "max_voltage": 7.0}
+    ]
+  },
+  "lm7805": {
+    "name": "LM7805 5V Linear Voltage Regulator",
+    "aliases": ["lm7805", "7805", "l7805", "7805cv", "voltage regulator 5v"],
+    "description": "3-terminal positive 5V voltage regulator capable of supplying up to 1.5A output current.",
+    "verified": true,
+    "voltage_limits": {
+      "input_voltage_min": 7.0,
+      "input_voltage_max": 25.0,
+      "output_voltage_nominal": 5.0,
+      "max_output_current_a": 1.5
+    },
+    "pins": [
+      {"name": "INPUT", "pin_number": "1", "function": "Unregulated DC Input Voltage (7V - 25V)", "max_voltage": 25.0},
+      {"name": "GROUND", "pin_number": "2", "function": "Common Ground", "max_voltage": 0.0},
+      {"name": "OUTPUT", "pin_number": "3", "function": "Regulated 5.0V Output", "max_voltage": 5.0}
+    ]
+  },
+  "led": {
+    "name": "Generic 5mm Through-Hole LED",
+    "aliases": ["led", "light emitting diode", "led_red", "led_green"],
+    "description": "Two-terminal semiconductor light emitting diode.",
+    "verified": true,
+    "voltage_limits": {
+      "forward_voltage_red": 2.0,
+      "forward_voltage_blue_white": 3.2,
+      "max_forward_current_ma": 20.0,
+      "reverse_breakdown_voltage": 5.0
+    },
+    "pins": [
+      {"name": "A", "pin_number": "1", "function": "Anode (+) - Longer leg, connects to positive voltage through series resistor", "max_voltage": 3.3},
+      {"name": "C", "pin_number": "2", "function": "Cathode (-) - Shorter leg, flat side, connects to ground", "max_voltage": 0.0}
+    ]
+  },
+  "resistor": {
+    "name": "Axial Resistor",
+    "aliases": ["resistor", "through-hole resistor"],
+    "description": "Two-terminal passive electrical resistor.",
+    "verified": true,
+    "voltage_limits": {
+      "max_working_voltage": 250.0,
+      "power_rating_w": 0.25
+    },
+    "pins": [
+      {"name": "1", "pin_number": "1", "function": "Terminal 1 (bidirectional)", "max_voltage": 250.0},
+      {"name": "2", "pin_number": "2", "function": "Terminal 2 (bidirectional)", "max_voltage": 250.0}
+    ]
+  },
+  "pushbutton": {
+    "name": "Tactile Pushbutton Switch",
+    "aliases": ["pushbutton", "button", "switch", "push_button"],
+    "description": "Four-terminal momentary tactile switch. Pairs 1.l/1.r and 2.l/2.r are internally connected.",
+    "verified": true,
+    "voltage_limits": {
+      "max_voltage": 12.0,
+      "max_current_ma": 50.0
+    },
+    "pins": [
+      {"name": "1.l", "pin_number": "1", "function": "Terminal 1 (Left side, shorted to 1.r)", "max_voltage": 12.0},
+      {"name": "1.r", "pin_number": "2", "function": "Terminal 1 (Right side, shorted to 1.l)", "max_voltage": 12.0},
+      {"name": "2.l", "pin_number": "3", "function": "Terminal 2 (Left side, shorted to 2.r)", "max_voltage": 12.0},
+      {"name": "2.r", "pin_number": "4", "function": "Terminal 2 (Right side, shorted to 2.l)", "max_voltage": 12.0}
+    ]
+  }
+}
+

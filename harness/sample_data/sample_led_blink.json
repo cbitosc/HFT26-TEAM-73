@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "id": "sample-led-blink",
+  "board": {
+    "template": "arduino-uno"
+  },
+  "parts": [
+    {
+      "id": "r1",
+      "type": "resistor",
+      "value": "220",
+      "color": null,
+      "bbox": [0.42, 0.36, 0.10, 0.06],
+      "source": "user",
+      "conf": 1.0,
+      "confirmed": true,
+      "track_id": null,
+      "wokwi_type": "wokwi-resistor"
+    },
+    {
+      "id": "led1",
+      "type": "led",
+      "value": null,
+      "color": "red",
+      "bbox": [0.55, 0.35, 0.08, 0.08],
+      "source": "user",
+      "conf": 1.0,
+      "confirmed": true,
+      "track_id": null,
+      "wokwi_type": "wokwi-led"
+    }
+  ],
+  "connections": [
+    {
+      "from": "uno:13",
+      "to": "r1:1",
+      "source": "user",
+      "conf": 1.0,
+      "confirmed": true,
+      "wire_color": "green",
+      "note": "Digital pin 13 to resistor"
+    },
+    {
+      "from": "r1:2",
+      "to": "led1:A",
+      "source": "user",
+      "conf": 1.0,
+      "confirmed": true,
+      "wire_color": "green",
+      "note": "Resistor to LED anode"
+    },
+    {
+      "from": "led1:C",
+      "to": "uno:GND.1",
+      "source": "user",
+      "conf": 1.0,
+      "confirmed": true,
+      "wire_color": "black",
+      "note": "LED cathode to ground rail"
+    }
+  ],
+  "inspection": [
+    {
+      "slot": "slot_mcu",
+      "state": "present",
+      "conf": 0.98
+    },
+    {
+      "slot": "slot_regulator",
+      "state": "present",
+      "conf": 0.95
+    }
+  ]
+}
+

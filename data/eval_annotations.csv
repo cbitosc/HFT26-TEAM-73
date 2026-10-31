@@ -1,0 +1,4 @@
+image_filename,expected_components
+test_board_1.jpg,"arduino_board,microcontroller,resistor,led"
+test_board_2.jpg,"microcontroller,voltage_regulator,usb_port"
+

@@ -1,0 +1,13 @@
+# Heavy vision dependencies for real inference mode (VISION_BACKEND=real)
+# Install separately: pip install -r requirements-vision.txt
+torch>=2.2.0
+torchvision>=0.17.0
+transformers>=4.38.0
+ultralytics>=8.1.0
+opencv-python>=4.9.0
+pillow>=10.0.0
+numpy>=1.26.0
+onnxruntime>=1.17.0
+pyyaml>=6.0
+easyocr>=1.7.0
+

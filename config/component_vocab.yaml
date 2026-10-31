@@ -1,0 +1,148 @@
+# VisionGuard Component Vocabulary for Open-Vocabulary Detection
+# Each entry defines:
+#   name: identifier
+#   prompts: list of natural language text prompts for zero-shot detectors (OWL-ViT, Grounding DINO, YOLO-World)
+#   category: ic | board | passive | semiconductor | connector | switch | module
+#   mapped_wiring_type: optional mapped Circuit JSON part type (led | resistor | pushbutton | arduino-uno | null)
+
+components:
+  - name: microcontroller
+    prompts: ["microcontroller", "MCU chip", "microcontroller IC", "microcontroller chip"]
+    category: ic
+    mapped_wiring_type: null
+
+  - name: arduino_board
+    prompts: ["Arduino board", "Arduino Uno", "Arduino microcontroller board", "blue development board"]
+    category: board
+    mapped_wiring_type: arduino-uno
+
+  - name: esp32_module
+    prompts: ["ESP32 module", "ESP32 board", "ESP-WROOM chip", "Wi-Fi microcontroller module"]
+    category: board
+    mapped_wiring_type: null
+
+  - name: raspberry_pi
+    prompts: ["Raspberry Pi", "Raspberry Pi Pico", "single board computer"]
+    category: board
+    mapped_wiring_type: null
+
+  - name: integrated_circuit
+    prompts: ["integrated circuit chip", "IC package", "DIP chip", "SOIC chip", "black chip"]
+    category: ic
+    mapped_wiring_type: null
+
+  - name: resistor
+    prompts: ["resistor", "axial resistor", "through-hole resistor", "SMD resistor", "color banded resistor"]
+    category: passive
+    mapped_wiring_type: resistor
+
+  - name: capacitor
+    prompts: ["capacitor", "decoupling capacitor", "surface mount capacitor"]
+    category: passive
+    mapped_wiring_type: null
+
+  - name: electrolytic_capacitor
+    prompts: ["electrolytic capacitor", "cylindrical capacitor", "can capacitor", "aluminum capacitor"]
+    category: passive
+    mapped_wiring_type: null
+
+  - name: ceramic_capacitor
+    prompts: ["ceramic capacitor", "disc capacitor", "small brown capacitor"]
+    category: passive
+    mapped_wiring_type: null
+
+  - name: inductor
+    prompts: ["inductor", "copper coil inductor", "ferrite bead", "toroid choke"]
+    category: passive
+    mapped_wiring_type: null
+
+  - name: diode
+    prompts: ["diode", "rectifier diode", "Schottky diode", "black cylindrical diode"]
+    category: semiconductor
+    mapped_wiring_type: null
+
+  - name: led
+    prompts: ["LED", "light emitting diode", "indicator light", "plastic LED lamp"]
+    category: semiconductor
+    mapped_wiring_type: led
+
+  - name: transistor
+    prompts: ["transistor", "MOSFET", "TO-92 package", "SOT-23 transistor", "bipolar junction transistor"]
+    category: semiconductor
+    mapped_wiring_type: null
+
+  - name: voltage_regulator
+    prompts: ["voltage regulator", "linear regulator", "7805 regulator", "AMS1117 regulator", "TO-220 package"]
+    category: ic
+    mapped_wiring_type: null
+
+  - name: crystal_oscillator
+    prompts: ["crystal oscillator", "quartz crystal", "silver metal can crystal", "resonator"]
+    category: passive
+    mapped_wiring_type: null
+
+  - name: gpio_header
+    prompts: ["GPIO header", "pin header", "female header pins", "male header pins", "black header strip"]
+    category: connector
+    mapped_wiring_type: null
+
+  - name: usb_port
+    prompts: ["USB port", "USB-C connector", "USB Type-B connector", "micro USB port"]
+    category: connector
+    mapped_wiring_type: null
+
+  - name: power_jack
+    prompts: ["DC barrel power jack", "power jack", "DC power connector"]
+    category: connector
+    mapped_wiring_type: null
+
+  - name: hdmi_port
+    prompts: ["HDMI port", "micro-HDMI port", "display connector"]
+    category: connector
+    mapped_wiring_type: null
+
+  - name: push_button
+    prompts: ["push button", "tactile switch", "pushbutton switch", "momentary button"]
+    category: switch
+    mapped_wiring_type: pushbutton
+
+  - name: switch
+    prompts: ["toggle switch", "slide switch", "DIP switch", "power switch"]
+    category: switch
+    mapped_wiring_type: null
+
+  - name: relay
+    prompts: ["relay", "blue relay cube", "electromechanical relay"]
+    category: module
+    mapped_wiring_type: null
+
+  - name: sensor_module
+    prompts: ["sensor module", "sensor breakout board", "ultrasonic sensor", "temperature sensor module"]
+    category: module
+    mapped_wiring_type: null
+
+  - name: display
+    prompts: ["OLED display", "LCD screen", "seven segment display", "display screen"]
+    category: module
+    mapped_wiring_type: null
+
+  - name: antenna
+    prompts: ["Wi-Fi antenna", "PCB trace antenna", "ceramic chip antenna"]
+    category: module
+    mapped_wiring_type: null
+
+  - name: buzzer
+    prompts: ["piezo buzzer", "audio buzzer", "round black buzzer"]
+    category: module
+    mapped_wiring_type: null
+
+  - name: jumper_wire
+    prompts: ["jumper wire", "colored wire", "Dupont wire", "connecting wire"]
+    category: connector
+    mapped_wiring_type: null
+
+  - name: breadboard
+    prompts: ["breadboard", "solderless breadboard", "prototyping breadboard"]
+    category: board
+    mapped_wiring_type: null
+
